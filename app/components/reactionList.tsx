@@ -12,7 +12,7 @@ export default function ReactionList() {
 
   const sendReaction = useCallback((reaction: string) => {
 
-    const url = 'https://script.google.com/macros/s/AKfycbz8VybN4qZaIaS6jTtkeGrIsUnAKfEYy1Po_bsqfI6J9wLHrnZuUneQHMLldjvl_eVz9A/exec';
+    const url = `https://script.google.com/macros/s/${process.env.NEXT_PUBLIC_GAS_ID}/exec`;
 
     const params = new URLSearchParams();
     params.append('reaction', reaction);
