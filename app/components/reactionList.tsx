@@ -31,7 +31,7 @@ export default function ReactionList() {
       .then((result) => {
         console.log(result);
       })
-      .catch((e) => console.log(`error: ${e}`));
+      .catch((error) => console.log(error));
   }, []);
 
 
