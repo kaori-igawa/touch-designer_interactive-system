@@ -1,10 +1,11 @@
 'use client';
 
 import { useCallback } from "react";
+import Image from "next/image";
 
 
 const reactions = [
-  '💖', '💗', '👏', '😆', '🤩', '😍', '🥺', '😢', '😭', '💩', '😺', '💯',
+  'stampImage_01', 'stampImage_02', 'stampImage_03', 'stampImage_04', 'stampImage_05', 'stampImage_06', 'stampImage_07', 'stampImage_08',
 ]
 
 
@@ -39,7 +40,9 @@ export default function ReactionList() {
     <ul className="flex flex-wrap justify-center items-center gap-7">
       {reactions.map((reaction, index) => {
         return (
-          <li key={index} className="text-8xl" onClick={() => sendReaction(reaction)}>{reaction}</li>
+          <li key={index} className="w-2/5" onClick={() => sendReaction(reaction)}>
+            <Image src={`/images/${reaction}.png`} alt={reaction} sizes="100vw" width={300} height={300} />
+          </li>
         )
       })}
     </ul>
